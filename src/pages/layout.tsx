@@ -5,11 +5,13 @@ import { Projects } from "./projects"
 import { Skills } from "./skills"
 import { WorkExperience } from "./workexperience"
 import { Contact } from "./contact"
+import { About } from "./about"
 
 export const Layout = () => {
-  type SectionKeys = 'projects' | 'skills' | 'workexperience' | 'contact';
+  type SectionKeys = 'home' | 'projects' | 'skills' | 'workexperience' | 'contact';
 
   const sectionsRefs: Record<SectionKeys, React.RefObject<HTMLDivElement>> = {
+    home: useRef<HTMLDivElement>(null),
     projects: useRef<HTMLDivElement>(null),
     skills: useRef<HTMLDivElement>(null),
     workexperience: useRef<HTMLDivElement>(null),
@@ -23,6 +25,9 @@ export const Layout = () => {
   return (
     <>
       <Navbar scrollToSection={scrollToSection} />
+      <div ref={sectionsRefs.home} id="home">
+        <About />
+      </div>
       <div ref={sectionsRefs.projects} id="projects">
         <Projects />
       </div>

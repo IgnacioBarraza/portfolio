@@ -19,6 +19,7 @@ export const Navbar = ({
         </SheetTrigger>
         <SheetContent side={"left"}>
           <Button
+            onClick={() => scrollToSection("home")}
             variant={"ghost"}
             className="flex items-center justify-center"
           >
@@ -58,6 +59,7 @@ export const Navbar = ({
         </SheetContent>
       </Sheet>
       <Button
+        onClick={() => scrollToSection("home")}
         variant={"ghost"}
         className="lg:flex items-center justify-center hidden"
       >
