@@ -1,30 +1,58 @@
-import { faCode } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Link } from "react-router-dom"
+import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faCode } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
-    <div className="flex flex-col">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link to={'/'} className="flex items-center justify-center">
-          <FontAwesomeIcon icon={faCode} size="xl"/>
-          <span className="sr-only">Ignacio Barraza's portfolio</span>
+    <header className="flex px-4 lg:px-6 h-20 items-center">
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button variant="outline" size="icon" className="lg:hidden">
+            <FontAwesomeIcon icon={faBars} size="xl" />
+            <span className="sr-only">Toggle navigation button</span>
+          </Button>
+        </SheetTrigger>
+        <SheetContent side={"left"}>
+          <Link to={"/"} className="flex items-center justify-center">
+            <FontAwesomeIcon icon={faCode} size="2xl" />
+            <span className="sr-only">Ignacio Barraza's portfolio</span>
+          </Link>
+          <nav className="grid gap-4 py-6">
+            <Link to={"projects"} className="text-lg font-medium hover:">
+              Projects
+            </Link>
+            <Link to={"skills"} className="text-lg font-medium hover:">
+              Skills
+            </Link>
+            <Link to={"workexperience"} className="text-lg font-medium hover:">
+              Work Experience
+            </Link>
+            <Link to={"contact"} className="text-lg font-medium hover:">
+              Contact
+            </Link>
+          </nav>
+        </SheetContent>
+      </Sheet>
+      <Link to={"/"} className="lg:flex items-center justify-center hidden">
+        <FontAwesomeIcon icon={faCode} size="2xl" />
+        <span className="sr-only">Ignacio Barraza's portfolio</span>
+      </Link>
+      <div className="ml-auto hidden lg:flex gap-4 sm:gap-6">
+        <Link to={"projects"} className="text-lg font-medium hover:">
+          Projects
         </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-8">
-          <Link to={'projects'} className="text-lg font-medium hover:underline underline-offset-4">
-            Projects
-          </Link>
-          <Link to={'skills'} className="text-lg font-medium hover:underline underline-offset-4">
-            Skills
-          </Link>
-          <Link to={'workexperience'} className="text-lg font-medium hover:underline underline-offset-4">
-            Work Experience
-          </Link>
-          <Link to={'contact'} className="text-lg font-medium hover:underline underline-offset-4">
-            Contact
-          </Link>
-        </nav>
-      </header>
-    </div>
-  )
-}
+        <Link to={"skills"} className="text-lg font-medium hover:">
+          Skills
+        </Link>
+        <Link to={"workexperience"} className="text-lg font-medium hover:">
+          Work Experience
+        </Link>
+        <Link to={"contact"} className="text-lg font-medium hover:">
+          Contact
+        </Link>
+      </div>
+    </header>
+  );
+};
