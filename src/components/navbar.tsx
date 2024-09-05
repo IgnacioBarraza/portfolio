@@ -2,11 +2,14 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faCode } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 
-export const Navbar = () => {
+export const Navbar = ({
+  scrollToSection,
+}: {
+  scrollToSection: (section: any) => void;
+}) => {
   return (
-    <header className="flex px-4 lg:px-6 h-20 items-center">
+    <header className="flex px-4 lg:px-6 h-20 items-center sm:border-b">
       <Sheet>
         <SheetTrigger asChild>
           <Button variant="outline" size="icon" className="lg:hidden">
@@ -15,43 +18,81 @@ export const Navbar = () => {
           </Button>
         </SheetTrigger>
         <SheetContent side={"left"}>
-          <Link to={"/"} className="flex items-center justify-center">
+          <Button
+            variant={"ghost"}
+            className="flex items-center justify-center"
+          >
             <FontAwesomeIcon icon={faCode} size="2xl" />
             <span className="sr-only">Ignacio Barraza's portfolio</span>
-          </Link>
+          </Button>
           <nav className="grid gap-4 py-6">
-            <Link to={"projects"} className="text-lg font-medium hover:">
+            <Button
+              onClick={() => scrollToSection("projects")}
+              className="text-lg font-medium hover:underline underline-offset-4"
+              variant={"ghost"}
+            >
               Projects
-            </Link>
-            <Link to={"skills"} className="text-lg font-medium hover:">
+            </Button>
+            <Button
+              onClick={() => scrollToSection("skills")}
+              className="text-lg font-medium hover:underline underline-offset-4"
+              variant={"ghost"}
+            >
               Skills
-            </Link>
-            <Link to={"workexperience"} className="text-lg font-medium hover:">
+            </Button>
+            <Button
+              onClick={() => scrollToSection("workexperience")}
+              className="text-lg font-medium hover:underline underline-offset-4"
+              variant={"ghost"}
+            >
               Work Experience
-            </Link>
-            <Link to={"contact"} className="text-lg font-medium hover:">
+            </Button>
+            <Button
+              onClick={() => scrollToSection("contact")}
+              className="text-lg font-medium hover:underline underline-offset-4"
+              variant={"ghost"}
+            >
               Contact
-            </Link>
+            </Button>
           </nav>
         </SheetContent>
       </Sheet>
-      <Link to={"/"} className="lg:flex items-center justify-center hidden">
+      <Button
+        variant={"ghost"}
+        className="lg:flex items-center justify-center hidden"
+      >
         <FontAwesomeIcon icon={faCode} size="2xl" />
         <span className="sr-only">Ignacio Barraza's portfolio</span>
-      </Link>
+      </Button>
       <div className="ml-auto hidden lg:flex gap-4 sm:gap-6">
-        <Link to={"projects"} className="text-lg font-medium hover:">
+        <Button
+          onClick={() => scrollToSection("projects")}
+          className="text-lg font-medium hover:underline underline-offset-4"
+          variant={"ghost"}
+        >
           Projects
-        </Link>
-        <Link to={"skills"} className="text-lg font-medium hover:">
+        </Button>
+        <Button
+          onClick={() => scrollToSection("skills")}
+          className="text-lg font-medium hover:underline underline-offset-4"
+          variant={"ghost"}
+        >
           Skills
-        </Link>
-        <Link to={"workexperience"} className="text-lg font-medium hover:">
+        </Button>
+        <Button
+          onClick={() => scrollToSection("workexperience")}
+          className="text-lg font-medium hover:underline underline-offset-4"
+          variant={"ghost"}
+        >
           Work Experience
-        </Link>
-        <Link to={"contact"} className="text-lg font-medium hover:">
+        </Button>
+        <Button
+          onClick={() => scrollToSection("contact")}
+          className="text-lg font-medium hover:underline underline-offset-4"
+          variant={"ghost"}
+        >
           Contact
-        </Link>
+        </Button>
       </div>
     </header>
   );
