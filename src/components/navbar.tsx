@@ -3,11 +3,7 @@ import { Button } from "@/components/ui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faCode } from "@fortawesome/free-solid-svg-icons";
 
-export const Navbar = ({
-  scrollToSection,
-}: {
-  scrollToSection: (section: any) => void;
-}) => {
+export const Navbar = ({scrollToSection}: {scrollToSection: (section: any) => void}) => {
   return (
     <header className="flex px-4 lg:px-6 h-20 items-center sm:border-b">
       <Sheet>
