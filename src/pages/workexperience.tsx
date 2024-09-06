@@ -1,4 +1,4 @@
-export const Workexperience = () => {
+export const WorkExperience = () => {
   return (
     <div>workexperience</div>
   )

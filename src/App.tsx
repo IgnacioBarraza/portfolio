@@ -1,10 +1,9 @@
 import './App.css'
-import Router from './routes'
-import { Routes } from './routes/routeConfig'
+import { Layout } from './pages/layout'
 
 function App() {
 
-  return <Router routes={Routes} />
+  return <Layout />
 }
 
 export default App
