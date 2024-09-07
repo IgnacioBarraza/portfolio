@@ -38,14 +38,14 @@ export default function Home() {
           <div ref={sectionsRefs.home} id="home">
             <About />
           </div>
+          <div ref={sectionsRefs.workexperience} id="workexperience">
+            <WorkExperience />
+          </div>
           <div ref={sectionsRefs.projects} id="projects">
             <Projects />
           </div>
           <div ref={sectionsRefs.skills} id="skills">
             <Skills />
-          </div>
-          <div ref={sectionsRefs.workexperience} id="workexperience">
-            <WorkExperience />
           </div>
           <div ref={sectionsRefs.contact} id="contact">
             <Contact />
