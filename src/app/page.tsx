@@ -4,7 +4,7 @@
 import Navbar from "@/components/navbar";
 import { useRef } from "react";
 import About from "./pages/about/page";
-import { Projects } from "./pages/projects/page";
+import Projects from "./pages/projects/page";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -29,25 +29,27 @@ export default function Home() {
 
   return (
     <>
-      <Navbar scrollToSection={scrollToSection} />
-      <main className="flex-1">
-        <div ref={sectionsRefs.home} id="home">
-          <About />
-        </div>
-        <div ref={sectionsRefs.projects} id="projects">
-          <Projects />
-        </div>
-        <div ref={sectionsRefs.skills} id="skills">
-          {/* <Skills /> */}
-        </div>
-        <div ref={sectionsRefs.workexperience} id="workexperience">
-          {/* <WorkExperience /> */}
-        </div>
-        <div ref={sectionsRefs.contact} id="contact">
-          {/* <Contact /> */}
-        </div>
-      </main>
-      <Footer />
+      <div className="flex flex-col min-h-[100dvh]">
+        <Navbar scrollToSection={scrollToSection} />
+        <main className="flex-1">
+          <div ref={sectionsRefs.home} id="home">
+            <About />
+          </div>
+          <div ref={sectionsRefs.projects} id="projects">
+            <Projects />
+          </div>
+          <div ref={sectionsRefs.skills} id="skills">
+            {/* <Skills /> */}
+          </div>
+          <div ref={sectionsRefs.workexperience} id="workexperience">
+            {/* <WorkExperience /> */}
+          </div>
+          <div ref={sectionsRefs.contact} id="contact">
+            {/* <Contact /> */}
+          </div>
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }
