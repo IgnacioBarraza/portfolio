@@ -14,19 +14,23 @@ export default function About() {
               Ignacio Barraza
             </h1>
             <Link
-                href={"https://www.linkedin.com/in/ignacio-barraza-rioja/"}
-                className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-green-500 text-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-green-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                prefetch={false}
-                target="blank"
-              >
-                Open to work
+              href={"https://www.linkedin.com/in/ignacio-barraza-rioja/"}
+              className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-green-500 text-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-green-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+              prefetch={false}
+              target="blank"
+            >
+              Open to work
             </Link>
-            <h2 className="text-3xl font-bold tracking-tighter">Software developer</h2>
+            <h2 className="text-3xl font-bold tracking-tighter">
+              Software developer
+            </h2>
             <p className="max-w-[600px] text-muted-foreground md:text-xl">
-              I&apos;m a software developer with a passion for building
-              innovative web applications. I have a strong background in
-              full-stack web development, also I&apos;m always eager to learn
-              new technologies and techniques.
+              Full Stack Developer with 2 years of experience in front-end and
+              back-end development. Skilled in Angular, Node.js, Firebase, and
+              TypeScript. Experienced in creating user-friendly interfaces and
+              scalable backend solutions. Focused on delivering accessible,
+              high-performance applications. Passionate about robotics and
+              AI, continuously exploring innovative solutions.
             </p>
             <div className="flex gap-4 mt-4">
               <Link
@@ -46,7 +50,7 @@ export default function About() {
                 <FontAwesomeIcon icon={faGithub} className="mr-2" />
                 Github
               </Link>
-              
+
               <Link
                 href="#"
                 className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
@@ -58,14 +62,14 @@ export default function About() {
             </div>
           </div>
           <div className="mx-auto w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden">
-          <Image
-            src="/zoro.jpeg"
-            alt="About"
-            width={550}
-            height={550}
-            className="object-cover"
-            style={{ aspectRatio: "550/550", objectFit: "cover" }}
-          />
+            <Image
+              src="/zoro.jpeg"
+              alt="About"
+              width={550}
+              height={550}
+              className="object-cover"
+              style={{ aspectRatio: "550/550", objectFit: "cover" }}
+            />
           </div>
         </div>
       </div>

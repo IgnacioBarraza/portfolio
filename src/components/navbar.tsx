@@ -25,7 +25,7 @@ export default function Navbar({scrollToSection,}: {scrollToSection: (section: a
           onClick={() => scrollToSection("workexperience")}
           className="text-sm font-medium hover:underline underline-offset-4"
         >
-          Experience
+          Work
         </button>
         <button
           onClick={() => scrollToSection("projects")}

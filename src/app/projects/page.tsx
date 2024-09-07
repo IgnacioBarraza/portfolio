@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Projects() {
   return (
-    <section className="w-full py-12 md:py24 lg:py-32 bg-muted">
+    <section className="w-full py-12 md:py24 lg:py-32">
       <div className="container px-4 md:px-6 sm:mx-auto">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
@@ -16,7 +16,7 @@ export default function Projects() {
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-          <div className="rounded-lg shadow-md overflow-hidden bg-[#0a0a0a]">
+          <div className="rounded-lg shadow-md overflow-hidden bg-muted">
             <Link href="/projects/black-shark-web" prefetch={false}>
               <Image
                 src="/proyecto_bsw.png"
@@ -34,7 +34,7 @@ export default function Projects() {
               </div>
             </Link>
           </div>
-          <div className="rounded-lg shadow-md overflow-hidden bg-[#0a0a0a]">
+          <div className="rounded-lg shadow-md overflow-hidden bg-muted">
             <Link href="/projects/tech-challenge" prefetch={false}>
               <Image
                 src="/tech_challenge.png"
@@ -52,7 +52,7 @@ export default function Projects() {
               </div>
             </Link>
           </div>
-          <div className="rounded-lg shadow-md overflow-hidden bg-[#0a0a0a]">
+          <div className="rounded-lg shadow-md overflow-hidden bg-muted">
             <Link href="/projects/anime-hub" prefetch={false}>
               <Image
                 src="/anime_hub.png"

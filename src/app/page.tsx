@@ -6,8 +6,8 @@ import { useRef } from "react";
 import About from "./about/page";
 import Projects from "./projects/page";
 import Footer from "@/components/footer";
-import Skills from "./skills/skills";
-import WorkExperience from "./workexperience/workexperience";
+import Skills from "./skills/page";
+import WorkExperience from "./workexperience/page";
 import Contact from "./contact/contact";
 
 export default function Home() {
