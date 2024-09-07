@@ -3,8 +3,8 @@
 
 import Navbar from "@/components/navbar";
 import { useRef } from "react";
-import About from "./pages/about/page";
-import Projects from "./pages/projects/page";
+import About from "./about/page";
+import Projects from "./projects/page";
 import Footer from "@/components/footer";
 
 export default function Home() {

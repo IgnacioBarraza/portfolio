@@ -16,8 +16,8 @@ export default function Projects() {
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-          <div className="rounded-lg shadow-md overflow-hidden" style={{'backgroundColor': 'hsl(240 5% 6%)'}}>
-            <Link href="#" prefetch={false}>
+          <div className="rounded-lg shadow-md overflow-hidden bg-[#0a0a0a]">
+            <Link href="/projects/black-shark-web" prefetch={false}>
               <Image
                 src="/proyecto_bsw.png"
                 width="700"
@@ -34,8 +34,8 @@ export default function Projects() {
               </div>
             </Link>
           </div>
-          <div className="rounded-lg shadow-md overflow-hidden" style={{'backgroundColor': 'hsl(240 5% 6%)'}}>
-            <Link href="#" prefetch={false}>
+          <div className="rounded-lg shadow-md overflow-hidden bg-[#0a0a0a]">
+            <Link href="/projects/tech-challenge" prefetch={false}>
               <Image
                 src="/tech_challenge.png"
                 width="700"
@@ -52,8 +52,8 @@ export default function Projects() {
               </div>
             </Link>
           </div>
-          <div className="rounded-lg shadow-md overflow-hidden" style={{'backgroundColor': 'hsl(240 5% 6%)'}}>
-            <Link href="#" prefetch={false}>
+          <div className="rounded-lg shadow-md overflow-hidden bg-[#0a0a0a]">
+            <Link href="/projects/anime-hub" prefetch={false}>
               <Image
                 src="/anime_hub.png"
                 width="700"

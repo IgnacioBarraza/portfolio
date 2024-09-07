@@ -1,0 +1,29 @@
+[
+  {
+    "id": "anime-hub",
+    "title": "Anime Hub",
+    "description": "A project about anime collection.",
+    "content": "Details about the Anime Hub project.",
+    "image": "/anime_hub.png",
+    "demo": "#",
+    "sourceCode": ""
+  },
+  {
+    "id": "tech-challenge",
+    "title": "Tech Challenge",
+    "description": "A tech challenge project.",
+    "content": "Details about the Tech Challenge project.",
+    "image": "/tech_challenge.png",
+    "demo": "https://tech-challenge.devnacho.me/",
+    "sourceCode": "https://github.com/IgnacioBarraza/Desafio_Tecnico_Lazarillo"
+  },
+  {
+    "id": "black-shark-web",
+    "title": "Black Shark Web",
+    "description": "A web project for Black Shark.",
+    "content": "Details about the Black Shark Web project.",
+    "image": "/proyecto_bsw.png",
+    "demo": "https://blacksharkstudiosweb.web.app/",
+    "sourceCode": "https://github.com/IgnacioBarraza/BlackSharkWeb"
+  }
+]
