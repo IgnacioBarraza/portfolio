@@ -1,13 +1,13 @@
-import { Navbar } from "../components/navbar";
-import { Footer } from "@/components/footer";
-import { useRef } from "react";
-import { Projects } from "./projects";
-import { Skills } from "./skills";
-import { WorkExperience } from "./workexperience";
-import { Contact } from "./contact";
-import { About } from "./about";
+// src/app/page.tsx
+"use client";
 
-export const Layout = () => {
+import Navbar from "@/components/navbar";
+import { useRef } from "react";
+import About from "./pages/about/page";
+import { Projects } from "./pages/projects/page";
+import Footer from "@/components/footer";
+
+export default function Home() {
   type SectionKeys =
     | "home"
     | "projects"
@@ -38,16 +38,16 @@ export const Layout = () => {
           <Projects />
         </div>
         <div ref={sectionsRefs.skills} id="skills">
-          <Skills />
+          {/* <Skills /> */}
         </div>
         <div ref={sectionsRefs.workexperience} id="workexperience">
-          <WorkExperience />
+          {/* <WorkExperience /> */}
         </div>
         <div ref={sectionsRefs.contact} id="contact">
-          <Contact />
+          {/* <Contact /> */}
         </div>
       </main>
       <Footer />
     </>
   );
-};
+}

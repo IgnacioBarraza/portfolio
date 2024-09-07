@@ -1,6 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Manrope', monospace, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
 
 @layer base {
   :root {
@@ -31,12 +56,7 @@
   * {
     @apply border-border;
   }
-
   body {
-    @apply bg-background text-foreground font-manrope;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-manrope;
+    @apply bg-background text-foreground;
   }
 }

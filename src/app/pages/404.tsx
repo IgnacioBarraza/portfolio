@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Link } from "react-router-dom";
 
 export const Page404 = () => {
@@ -6,7 +7,7 @@ export const Page404 = () => {
       <section className="w-full min-h-screen flex items-center justify-center">
         <div className="text-center space-y-4">
           <div className="flex items-center justify-center">
-            <img
+            <Image
               src="/dio-brando-dio.gif"
               alt="Confused page gif"
               className="rounded-full"
@@ -17,7 +18,7 @@ export const Page404 = () => {
           </div>
           <h1 className="text-6xl font-bold">404</h1>
           <p className="text-muted-foreground text-xl">
-            Oops, the page you're looking for doesn't exist.
+            Oops, the page you&apos;re looking for doesn&apos;t exist.
           </p>
           <Link
             to={"/"}
