@@ -6,6 +6,9 @@ import { useRef } from "react";
 import About from "./about/page";
 import Projects from "./projects/page";
 import Footer from "@/components/footer";
+import Skills from "./skills/skills";
+import WorkExperience from "./workexperience/workexperience";
+import Contact from "./contact/contact";
 
 export default function Home() {
   type SectionKeys =
@@ -39,13 +42,13 @@ export default function Home() {
             <Projects />
           </div>
           <div ref={sectionsRefs.skills} id="skills">
-            {/* <Skills /> */}
+            <Skills />
           </div>
           <div ref={sectionsRefs.workexperience} id="workexperience">
-            {/* <WorkExperience /> */}
+            <WorkExperience />
           </div>
           <div ref={sectionsRefs.contact} id="contact">
-            {/* <Contact /> */}
+            <Contact />
           </div>
         </main>
         <Footer />
