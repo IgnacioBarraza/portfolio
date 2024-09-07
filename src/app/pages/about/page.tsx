@@ -42,7 +42,7 @@ export default function About() {
             </Button>
           </div>
         </div>
-        <Image src="/dio-brando-dio.gif" alt="About" width={550} height={550} className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full"/>
+        <Image src="/dio-brando-dio.gif" alt="About" unoptimized width={550} height={550} className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full"/>
       </div>
     </section>
   )
