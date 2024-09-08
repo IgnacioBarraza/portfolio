@@ -54,7 +54,7 @@ export default function Project({ params }: ProjectPageProps) {
                 {project.title}
               </h2>
               <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed">
-                {project.description}
+                {project.content}
               </p>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link

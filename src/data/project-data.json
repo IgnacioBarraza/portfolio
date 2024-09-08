@@ -2,8 +2,8 @@
   {
     "id": "anime-hub",
     "title": "Anime Hub",
-    "description": "A project about anime collection.",
-    "content": "Details about the Anime Hub project.",
+    "description": "A developing project that integrates anime and manga content into a single page for otaku fans.",
+    "content": "Anime Hub is an exciting project currently in development, designed for anime and manga enthusiasts. The project aims to bring together a wide array of content related to anime and manga into a single, cohesive page. With a focus on providing a comprehensive experience for otaku fans, Anime Hub will feature information on anime series, manga titles, news, and more. As it’s still in the design phase, the details are evolving, promising a dynamic and engaging platform for anime lovers.",
     "image": "/anime_hub.png",
     "demo": "#",
     "sourceCode": ""
@@ -11,8 +11,8 @@
   {
     "id": "tech-challenge",
     "title": "Tech Challenge",
-    "description": "A tech challenge project.",
-    "content": "Details about the Tech Challenge project.",
+    "description": "A technical interview project showcasing skills in web development and problem-solving for the Full Stack Developer role at Lazarillo.",
+    "content": "The Tech Challenge is a notable project completed as part of the technical interview process for the Full Stack Developer position at Lazarillo (mapvx). This project highlights my technical and development abilities, showcasing my capacity to address and solve complex technical problems. It serves as a testament to my skills and experience in web and software development, reflecting my competence and problem-solving approach.",
     "image": "/tech_challenge.png",
     "demo": "https://tech-challenge.devnacho.me/",
     "sourceCode": "https://github.com/IgnacioBarraza/Desafio_Tecnico_Lazarillo"
@@ -20,8 +20,8 @@
   {
     "id": "black-shark-web",
     "title": "Black Shark Web",
-    "description": "A web project for Black Shark.",
-    "content": "Details about the Black Shark Web project.",
+    "description": "An ecommerce site for a graphic designer offering photography and graphic design services, featuring an online portfolio and service booking.",
+    "content": "Black Shark Web is an ecommerce website created for a graphic designer specializing in photography and graphic design services. This platform allows clients to browse and book various creative services offered by the designer. Designed to be a one-stop solution for the designer’s business, Black Shark Web not only facilitates service bookings but also features an online portfolio showcasing their work. This project is tailored to enhance the designer's online presence and streamline client interactions.",
     "image": "/proyecto_bsw.png",
     "demo": "https://blacksharkstudiosweb.web.app/",
     "sourceCode": "https://github.com/IgnacioBarraza/BlackSharkWeb"

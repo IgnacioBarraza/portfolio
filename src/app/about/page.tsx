@@ -26,8 +26,7 @@ export default function About() {
             </h2>
             <p className="max-w-[600px] text-muted-foreground md:text-xl">
               Full Stack Developer with 2 years of experience in front-end and
-              back-end development. Skilled in Angular, Node.js, Firebase, and
-              TypeScript. Experienced in creating user-friendly interfaces and
+              back-end development. Experienced in creating user-friendly interfaces and
               scalable backend solutions. Focused on delivering accessible,
               high-performance applications. Passionate about robotics and
               AI, continuously exploring innovative solutions.
@@ -70,6 +69,7 @@ export default function About() {
               width={550}
               height={550}
               className="object-cover"
+              priority
               style={{ aspectRatio: "550/550", objectFit: "cover" }}
             />
           </div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import projectData from "@/data/project-data.json";
 
 export default function Projects() {
   return (
@@ -16,60 +17,29 @@ export default function Projects() {
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-          <div className="rounded-lg shadow-md overflow-hidden bg-muted">
-            <Link href="/projects/black-shark-web" prefetch={false}>
-              <Image
-                src="/proyecto_bsw.png"
-                width="700"
-                height="500"
-                alt="Project BSW"
-                className="w-full h-72 object-cover"
-                style={{ aspectRatio: "700/500", objectFit: "cover" }}
-              />
-              <div className="p-4">
-                <h3 className="text-lg font-medium">Black Shark Web</h3>
-                <p className="text-muted-foreground text-sm">
-                  E-commerce platform
-                </p>
-              </div>
-            </Link>
-          </div>
-          <div className="rounded-lg shadow-md overflow-hidden bg-muted">
-            <Link href="/projects/tech-challenge" prefetch={false}>
-              <Image
-                src="/tech_challenge.png"
-                width="700"
-                height="500"
-                alt="tech challenge"
-                className="w-full h-72 object-cover"
-                style={{ aspectRatio: "700/500", objectFit: "cover" }}
-              />
-              <div className="p-4">
-                <h3 className="text-lg font-medium">Tech Challenge Lazarillo</h3>
-                <p className="text-muted-foreground text-sm">
-                  Tech challenge for full stack position at Lazarillo
-                </p>
-              </div>
-            </Link>
-          </div>
-          <div className="rounded-lg shadow-md overflow-hidden bg-muted">
-            <Link href="/projects/anime-hub" prefetch={false}>
-              <Image
-                src="/anime_hub.png"
-                width="700"
-                height="500"
-                alt="Anime Hub"
-                className="w-full h-72 object-cover"
-                style={{ aspectRatio: "700/500", objectFit: "cover" }}
-              />
-              <div className="p-4">
-                <h3 className="text-lg font-medium">Anime Hub</h3>
-                <p className="text-muted-foreground text-sm">
-                  A web application for otakus, anime & manga lovers
-                </p>
-              </div>
-            </Link>
-          </div>
+          {projectData.map((project) => (
+            <div
+              key={project.id}
+              className="rounded-lg shadow-md overflow-hidden bg-muted"
+            >
+              <Link href={`projects/${project.id}`} prefetch={false}>
+                <Image
+                  src={project.image}
+                  width="700"
+                  height="500"
+                  alt={project.title}
+                  className="w-full h-72 object-cover"
+                  style={{ aspectRatio: "700/500", objectFit: "cover" }}
+                />
+                <div className="p-4">
+                  <h3 className="text-lg font-medium">{project.title}</h3>
+                  <p className="text-muted-foreground text-sm">
+                    {project.description}
+                  </p>
+                </div>
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </section>
