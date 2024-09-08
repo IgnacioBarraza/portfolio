@@ -39,6 +39,12 @@ export default function Navbar({scrollToSection,}: {scrollToSection: (section: a
         >
           Skills
         </button>
+        <button
+          onClick={() => scrollToSection("contact")}
+          className="text-sm font-medium hover:underline underline-offset-4"
+        >
+          Contact
+        </button>
       </nav>
     </header>
   );
