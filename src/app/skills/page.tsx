@@ -58,15 +58,12 @@ export default function Skills() {
                 <div className="flex items-center gap-2">
                   <span>Express JS</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span>Express JS</span>
-                </div>
               </div>
             </div>
           </div>
           <div className="flex flex-col justify-center space-y-4 bg-[#0a0a0a] rounded-lg p-6 shadow-lg">
             <div className="space-y-2">
-              <h3 className="text-xl font-bold">Tools & Technologies</h3>
+              <h3 className="text-xl font-bold">Tools & Databases</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-center gap-2">
                   <span>Git</span>

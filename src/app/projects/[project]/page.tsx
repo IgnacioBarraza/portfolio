@@ -1,27 +1,34 @@
-import { notFound } from "next/navigation";
-import projectData from "@/data/project-data.json";
-import Image from "next/image";
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCodepen } from "@fortawesome/free-brands-svg-icons";
-import {
-  faCode,
-  faDatabase,
-  faNetworkWired,
-  faWind,
-} from "@fortawesome/free-solid-svg-icons";
-import Footer from "@/components/footer";
+"use client"
+import { notFound } from "next/navigation"
+import projectData from "@/data/project-data.json"
+import Image from "next/image"
+import Link from "next/link"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCode } from "@fortawesome/free-solid-svg-icons"
+import Footer from "@/components/footer"
+import { ProjectStack } from "./projectStack"
+import { useState } from "react"
+import { ImageModal } from "./imageModal"
 
 interface ProjectPageProps {
   params: {
-    project: string;
-  };
+    project: string
+  }
 }
 
 export default function Project({ params }: ProjectPageProps) {
-  const project = projectData.find((p) => p.id === params.project);
+  const project = projectData.find((p) => p.id === params.project)
+  const [selectedImage, setSelectedImage] = useState<string>("")
 
-  if (!project) return notFound();
+  if (!project) return notFound()
+
+  const openModal = (imgSrc: string) => {
+    setSelectedImage(imgSrc)
+  }
+
+  const closeModal = () => {
+    setSelectedImage("")
+  }
 
   return (
     <>
@@ -36,7 +43,7 @@ export default function Project({ params }: ProjectPageProps) {
             <span className="sr-only">Ignacio Barraza&apos;s portfolio</span>
           </Link>
           <Link
-            href={'/'}
+            href={"/"}
             className="text-lg font-medium hover:underline underline-offset-4"
           >
             Go back
@@ -80,54 +87,45 @@ export default function Project({ params }: ProjectPageProps) {
                 Technologies Used
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <div className="flex items-center gap-2">
-                  <FontAwesomeIcon icon={faCodepen} className="w-10 h-10" />
-                  <span className="text-xl">React</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FontAwesomeIcon
-                    icon={faNetworkWired}
-                    className="w-10 h-10"
-                  />
-                  <span className="text-xl">Node.js</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FontAwesomeIcon icon={faDatabase} className="w-10 h-10" />
-                  <span className="text-xl">MongoDB</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FontAwesomeIcon icon={faWind} className="w-10 h-10" />
-                  <span className="text-xl">Tailwind CSS</span>
-                </div>
+                <ProjectStack stack={project.stack} />
               </div>
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-xl">
                 Screenshots
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-3 gap-4">
                 <Image
                   src={project.image}
                   width={300}
                   height={200}
                   alt={project.title}
                   className="aspect-video overflow-hidden object-cover object-center"
-                  style={{"borderRadius": "10px"}}
+                  style={{ borderRadius: "10px" }}
+                  onClick={() => openModal(project.image)}
                 />
-                <Image
-                  src={project.image}
-                  width={300}
-                  height={200}
-                  alt={project.title}
-                  className="aspect-video overflow-hidden object-cover object-center"
-                  style={{"borderRadius": "10px"}}
-                />
+                {project.images &&
+                  Object.values(project.images)
+                    .filter((imgSrc) => imgSrc)
+                    .map((imgSrc, index) => (
+                      <Image
+                        key={index}
+                        src={imgSrc}
+                        width={300}
+                        height={200}
+                        alt={`${project.title} - Image ${index + 1}`}
+                        className="aspect-video overflow-hidden object-cover object-center"
+                        style={{ borderRadius: "10px" }}
+                        onClick={() => openModal(imgSrc)}
+                      />
+                    ))}
               </div>
             </div>
           </div>
         </div>
+        <ImageModal selectedImage={selectedImage} onClose={closeModal} />
       </section>
       <div className="absolute bottom-0 w-full">
         <Footer />
       </div>
     </>
-  );
+  )
 }

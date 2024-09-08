@@ -1,8 +1,8 @@
 // src/app/page.tsx
-"use client";
+"use client"
 
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"
+import Link from "next/link"
 
 export default function Page404() {
   return (
@@ -33,5 +33,5 @@ export default function Page404() {
         </div>
       </section>
     </main>
-  );
-};
+  )
+}
