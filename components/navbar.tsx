@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function Navbar({scrollToSection,}: {scrollToSection: (section: any) => void;}) {
   return (
     <header className="sticky top-0 z-50 px-4 lg:px-6 h-14 flex items-center border-b bg-[#0a0a0a]">
