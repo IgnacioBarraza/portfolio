@@ -86,9 +86,7 @@ export default function Project({ params }: ProjectPageProps) {
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-xl">
                 Technologies Used
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <ProjectStack stack={project.stack} />
-              </div>
+              <ProjectStack stack={project.stack} />
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-xl">
                 Screenshots
               </div>
@@ -123,7 +121,7 @@ export default function Project({ params }: ProjectPageProps) {
         </div>
         <ImageModal selectedImage={selectedImage} onClose={closeModal} />
       </section>
-      <div className="absolute bottom-0 w-full">
+      <div className="sm:absolute sm:bottom-0 w-full">
         <Footer />
       </div>
     </>
