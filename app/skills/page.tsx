@@ -13,7 +13,7 @@ export default function Skills() {
             </p>
           </div>
         </div>
-        <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+        <div className="mx-auto grid max-w-6xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
           <div className="flex flex-col justify-center space-y-4 bg-[#0a0a0a] rounded-lg p-6 shadow-lg">
             <div className="space-y-2">
               <h3 className="text-xl font-bold">Programming Languages</h3>
