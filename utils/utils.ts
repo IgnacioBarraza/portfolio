@@ -43,4 +43,5 @@ export const techCategories: Record<string, string> = {
   "Docker": "docker",
   "Docker Compose": "docker",
   "Docker Hub": "docker",
+  "NestJS": "framework"
 };

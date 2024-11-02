@@ -1,14 +1,15 @@
-"use client"
-import { notFound } from "next/navigation"
-import projectData from "@/data/project-data.json"
-import Image from "next/image"
-import Link from "next/link"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCode } from "@fortawesome/free-solid-svg-icons"
-import Footer from "@/components/footer"
-import { ProjectStack } from "./projectStack"
-import { useState } from "react"
-import { ImageModal } from "./imageModal"
+'use client'
+
+import { notFound } from 'next/navigation'
+import projectData from '@/data/project-data.json'
+import Image from 'next/image'
+import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCode } from '@fortawesome/free-solid-svg-icons'
+import Footer from '@/components/footer'
+import { ProjectStack } from './projectStack'
+import { useState } from 'react'
+import { ImageModal } from './imageModal'
 
 interface ProjectPageProps {
   params: {
@@ -18,7 +19,7 @@ interface ProjectPageProps {
 
 export default function Project({ params }: ProjectPageProps) {
   const project = projectData.find((p) => p.id === params.project)
-  const [selectedImage, setSelectedImage] = useState<string>("")
+  const [selectedImage, setSelectedImage] = useState<string>('')
 
   if (!project) return notFound()
 
@@ -27,15 +28,15 @@ export default function Project({ params }: ProjectPageProps) {
   }
 
   const closeModal = () => {
-    setSelectedImage("")
+    setSelectedImage('')
   }
 
   return (
     <>
       <header className="flex px-4 lg:px-6 h-20 items-center sm:border-b">
-        <div className="hidden w-full lg:flex gap-4 sm:gap-6 lg:justify-between">
+        <div className="w-full flex gap-4 sm:gap-6 lg:justify-between">
           <Link
-            href={"/"}
+            href={'/'}
             className="flex items-center justify-center"
             prefetch={false}
           >
@@ -43,8 +44,8 @@ export default function Project({ params }: ProjectPageProps) {
             <span className="sr-only">Ignacio Barraza&apos;s portfolio</span>
           </Link>
           <Link
-            href={"/"}
-            className="text-lg font-medium hover:underline underline-offset-4"
+            href={'/'}
+            className="text-lg font-medium hover:underline underline-offset-4 hidden lg:flex"
           >
             Go back
           </Link>
@@ -64,22 +65,30 @@ export default function Project({ params }: ProjectPageProps) {
                 {project.content}
               </p>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Link
-                  href={project.demo}
-                  className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                  prefetch={false}
-                  target="blank"
-                >
-                  View Demo
-                </Link>
-                <Link
-                  href={project.sourceCode}
-                  className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                  prefetch={false}
-                  target="blank"
-                >
-                  View Code
-                </Link>
+                {project.demo.trim() ? (
+                  <Link
+                    href={project.demo}
+                    className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                    prefetch={false}
+                    target="blank"
+                  >
+                    View Demo
+                  </Link>
+                ) : (
+                  <span className="text-lg">
+                    Demo coming soon!
+                  </span> // Message when demo is empty
+                )}
+                {project.sourceCode.trim() && (
+                  <Link
+                    href={project.sourceCode}
+                    className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                    prefetch={false}
+                    target="blank"
+                  >
+                    View Code
+                  </Link>
+                )}
               </div>
             </div>
             <div className="flex flex-col items-start space-y-4">
@@ -97,7 +106,7 @@ export default function Project({ params }: ProjectPageProps) {
                   height={200}
                   alt={project.title}
                   className="aspect-video overflow-hidden object-cover object-center"
-                  style={{ borderRadius: "10px" }}
+                  style={{ borderRadius: '10px' }}
                   onClick={() => openModal(project.image)}
                 />
                 {project.images &&
@@ -111,7 +120,7 @@ export default function Project({ params }: ProjectPageProps) {
                         height={200}
                         alt={`${project.title} - Image ${index + 1}`}
                         className="aspect-video overflow-hidden object-cover object-center"
-                        style={{ borderRadius: "10px" }}
+                        style={{ borderRadius: '10px' }}
                         onClick={() => openModal(imgSrc)}
                       />
                     ))}
@@ -119,7 +128,11 @@ export default function Project({ params }: ProjectPageProps) {
             </div>
           </div>
         </div>
-        <ImageModal selectedImage={selectedImage} onClose={closeModal} />
+        <ImageModal
+          selectedImage={selectedImage}
+          onClose={closeModal}
+          images={[project.image, ...(project.images || [])]}
+        />
       </section>
       <div className="sm:absolute sm:bottom-0 w-full">
         <Footer />

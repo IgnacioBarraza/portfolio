@@ -1,16 +1,26 @@
 [
   {
     "id": "anime-hub",
-    "title": "Anime Hub",
+    "title": "Otaku Oasis",
     "description": "A developing project that integrates anime and manga content into a single page for otaku fans.",
-    "content": "Anime Hub is an exciting project currently in development, designed for anime and manga enthusiasts. The project aims to bring together a wide array of content related to anime and manga into a single, cohesive page. With a focus on providing a comprehensive experience for otaku fans, Anime Hub will feature information on anime series, manga titles, news, and more. As it’s still in the design phase, the details are evolving, promising a dynamic and engaging platform for anime lovers.",
+    "content": "Otaku Oasis is an exciting project currently in development, designed for anime and manga enthusiasts. The project aims to bring together a wide array of content related to anime and manga into a single, cohesive page. With a focus on providing a comprehensive experience for otaku fans, Anime Hub will feature information on anime series, manga titles, news, and more. As it’s still in the design phase, the details are evolving, promising a dynamic and engaging platform for anime lovers.",
     "image": "/anime-hub/anime_hub.png",
     "demo": "",
-    "sourceCode": "",
-    "images": {
-      "image1": ""
-    },
-    "stack": "NextJS, Tailwind CSS, MongoDB, Node.JS, Express.JS, Mongoose"
+    "sourceCode": "https://github.com/IgnacioBarraza/AnimeHub",
+    "images": [
+      "/anime-hub/anime_hub1.png",
+      "/anime-hub/anime_hub2.png",
+      "/anime-hub/anime_hub3.png",
+      "/anime-hub/anime_hub4.png",
+      "/anime-hub/anime_hub5.png",
+      "/anime-hub/anime_hub6.png",
+      "/anime-hub/anime_hub7.png",
+      "/anime-hub/anime_hub8.png",
+      "/anime-hub/anime_hub9.png",
+      "/anime-hub/anime_hub10.png",
+      "/anime-hub/anime_hub11.png"
+    ],
+    "stack": "Vite, Tailwind CSS, MongoDB, Node.JS, Express.JS, Mongoose"
   },
   {
     "id": "tech-challenge",
@@ -20,12 +30,12 @@
     "image": "/tech-challenge/tech_challenge.png",
     "demo": "https://tech-challenge.devnacho.me/",
     "sourceCode": "https://github.com/IgnacioBarraza/Desafio_Tecnico_Lazarillo",
-    "images": {
-      "image1": "/tech-challenge/tech-challenge-1.png",
-      "image2": "/tech-challenge/tech-challenge-2.png",
-      "image3": "/tech-challenge/tech-challenge-3.png"
-    },
-    "stack": "Angular, Bootstrap, Firebase, Node.JS, TypeScript"
+    "images": [
+      "/tech-challenge/tech-challenge-1.png",
+      "/tech-challenge/tech-challenge-2.png",
+      "/tech-challenge/tech-challenge-3.png"
+    ],
+    "stack": "Angular, Bootstrap, Firebase, Node.JS, TypeScript, GraphQL"
   },
   {
     "id": "black-shark-web",
@@ -35,13 +45,29 @@
     "image": "/bsw/proyecto_bsw.png",
     "demo": "https://blacksharkstudiosweb.web.app/",
     "sourceCode": "https://github.com/IgnacioBarraza/BlackSharkWeb",
-    "images": {
-      "image1": "/bsw/proyecto_bsw-1.png",
-      "image2": "/bsw/proyecto_bsw-2.png",
-      "image3": "/bsw/proyecto_bsw-3.png",
-      "image4": "/bsw/proyecto_bsw-4.png",
-      "image5": "/bsw/proyecto_bsw-5.png"
-    },
-    "stack": "Vite, Tailwind CSS, MySQL, Node.JS, Express.JS, React"
+    "images": [
+      "/bsw/proyecto_bsw-1.png",
+      "/bsw/proyecto_bsw-2.png",
+      "/bsw/proyecto_bsw-3.png",
+      "/bsw/proyecto_bsw-4.png",
+      "/bsw/proyecto_bsw-5.png"
+    ],
+    "stack": "Vite, Tailwind CSS, MySQL, Node.JS, Express.JS"
+  },
+  {
+    "id": "pe-uta",
+    "title": "Plataforma de Evaluación | Feria de Ciencias",
+    "description": "An evaluation platform designed and developed for the science expo organized by the engineering department of the Universidad de Tarapacá sede Iquique.",
+    "content": "Pe Uta is a website created to evaluate and manage the science expo organized by the engineering department of the Universidad de Tarapacá sede Iquique. This platform allows the people invited and the evaluators get the information about a project in a concise and summarized way, which helps to better evaluate each project. It also allows the organizers to manage everything related to the projects and the expo in general.",
+    "image": "/pe-uta/pe-uta.png",
+    "demo": "https://prouta.devnacho.me/inicio",
+    "sourceCode": "https://github.com/IgnacioBarraza/Pe_uta",
+    "images": [
+      "/pe-uta/pe-uta1.png",
+      "/pe-uta/pe-uta2.png",
+      "/pe-uta/pe-uta3.png",
+      "/pe-uta/pe-uta4.png"
+    ],
+    "stack": "Vite, Tailwind CSS, PostgreSQL, Node.JS, NestJS, TypeScript, Docker"
   }
 ]
